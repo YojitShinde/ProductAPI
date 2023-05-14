@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Insert title here</title>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" >
+</head>
+<body>
+	<!--Table code picked from https://getbootstrap.com/docs/4.3/content/tables/-->
+	<table class="table table-dark">
+	 <thead>
+	 <tr>
+	 <th scope="col">PID</th>
+	 <th scope="col">PNAME</th>
+	 <th scope="col">PRICE</th>
+	 </tr>
+	 </thead>
+	 <tbody>
+	 <tr th:each ="product : ${viewproduct}"> <!--means for loop is running in thymeleaf-->
+	 <td th:text="${product.pid}"></td>
+	 <td th:text="${product.pname}"></td>
+	 <td th:text="${product.price}"></td>
+	 </tr>
+	 </tbody>
+	</table>
+</body>
+</html>

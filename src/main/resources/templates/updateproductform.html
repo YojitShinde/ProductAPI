@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<title>Update product Form</title>
+</head>
+<body>
+<form th:action="@{/saveupdatedproduct}" th:object="${product}" method="post">
+<label>PID</label>
+<input type="text" th:field="*{pid}" placeholder="PID here" class="form-control mb-4 col-4">
+<label>Product name</label>
+<input type="text" th:field="*{pname}" placeholder="Product name here" class="form-control mb-4 col-4">
+<label>Price</label>
+<input type="text" th:field="*{price}" placeholder="Price" class="form-control mb-4 col-4">
+<button type="submit" class="btn btn-info col-2">Save Product</button>
+</form>
+<hr>
+<a th:href="@{/viewallproducts}">Back to product list</a>
+</body>
+</html>

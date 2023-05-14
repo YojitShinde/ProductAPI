@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<title>Product Form</title>
+</head>
+<body>
+<form th:action="@{/saveproduct}" th:object="${product}" method="post">
+<label>Product Name</label>
+<input type="text" th:field="*{pname}" placeholder="Product Name"
+class="form-control mb-4 col-4">
+<label>Price</label>
+<input type="text" th:field="*{price}" placeholder="Product price"
+class="form-control mb-4 col-4">
+<button type="submit" class="btn btn-info col-2">Save Product</button>
+</form>
+</body>
+</html>

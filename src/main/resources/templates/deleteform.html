@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<title>Delete Product Form</title>
+</head>
+<body>
+<form th:action="@{/deleteproduct/}" th:object="${product}" method="get">
+<label>PID</label>
+<input type="text" th:field="*{pid}" placeholder="PID here" class="form-control mb-4 col-4">
+<button type="submit" class="btn btn-danger col-2">Delete Product</button>
+</form>
+<hr>
+<a th:href="@{/viewallproducts}">Back to product list</a>
+</body>
+</html>
